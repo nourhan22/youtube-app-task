@@ -1,0 +1,29 @@
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.container-fluid {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    @include for-desktop-only{
+        width: 862px;
+       
+    }
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}

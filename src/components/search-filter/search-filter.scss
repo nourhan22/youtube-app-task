@@ -1,0 +1,59 @@
+@import "../../assets/sass/main.scss";
+.search-filter {
+    display: flex;
+    flex-direction: column;
+    & >div{
+        border-bottom:1px solid $meduim-gray;
+      
+    }
+
+    //align-items: center;
+    .filter-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom:15px;
+        margin-bottom:15px;
+        width:100%;
+    }
+
+    .filter-body {
+
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        text-align: left;
+        justify-content: space-between;
+        padding-bottom:15px;
+        margin-bottom:15px;
+        width:100%;
+
+        .type-filter {
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        button {
+            border: none;
+            text-align: left;
+            background-color: transparent;
+            text-transform: capitalize;
+            line-height: 25px;
+            font-size: 14px;
+            &:focus,&:active{
+                border: none;
+                outline: none;
+                &::after{
+                    font-family: 'icomoon';
+                    content: $icon-cross ;
+                    font-size: 10px;
+                    margin: 0px 10px;
+                }
+            }
+        }
+
+    }
+}

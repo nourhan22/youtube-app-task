@@ -1,0 +1,59 @@
+@import "../../assets/sass/main.scss";
+.nav {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    height: 40px;
+    background-color: $white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 99999;
+    align-items: center;
+
+    .search {
+        margin-right: 0px;
+        margin-left: auto;
+        width: 70%;
+        display: flex;
+        border:1px solid $meduim-gray;
+        input{
+            width:100%;
+            margin:5px;
+            border:none;
+            &:focus{
+                outline: none;
+            }
+        }
+        button{
+            border:none;
+            border-left:1px solid $meduim-gray;
+            background-color:$v-light-gray;
+            width:65px;
+            height:32px;
+            & span::before{
+                color:$dark-gray;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+
+    }
+
+    .img-logo {
+        background-image: url("../../assets/images/logo.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 24px;
+        width: 82px;
+    }
+}
+
+.main-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $light-gray;
+    padding-top:30px;
+   
+}

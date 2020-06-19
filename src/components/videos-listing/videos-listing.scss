@@ -1,0 +1,40 @@
+.video-card{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    margin:15px 0px;
+    iframe{
+        border:none;
+    }
+    .channel-img{
+        min-width: 246px;
+        height: 138px;
+        display: flex;
+        justify-content: center;
+        
+        img{
+            width: 120px;
+            height: 120px;
+            margin:auto;
+            border-radius:50%;
+            display:block;
+        }
+    }
+    .video-body{
+        text-align: left;
+        padding:0px 15px;
+        h4{
+            font-size: 16px;
+            line-height: 16px;
+           
+        }
+        h5{
+            font-size: 14px;
+            line-height: 14px;
+        }
+        p{
+            font-size: 12px;
+            line-height: 13px;
+        }
+    }
+}

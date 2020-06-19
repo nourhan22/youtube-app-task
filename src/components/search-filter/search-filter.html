@@ -1,0 +1,29 @@
+<div class="search-filter">
+   <div class="filter-bar"@click="isopen = !isopen">
+      <span class="icon-filter_list"></span><h4>filter</h4> 
+   </div>
+  
+   <div class="filter-body" v-if="isopen == true">
+      <div class="type-filter">
+         <h4>type</h4>
+    <div width="200" height="200"><button @click="changeType('channel',1);isActive = !isActive">channel </button></div>
+    <div width="200" height="200"><button @click="changeType('playlist',1);isActive = !isActive">playlist </button></div>
+    <div width="200" height="200"><button @click="changeType('video',1);isActive = !isActive">video </button></div>
+   </div>
+   <div class="upload-date-filter">
+      <h4>upload date</h4>
+      <div width="200" height="200"><button @click="changeType('lasthour',3);isActive = !isActive">last hour </button></div>
+      <div width="200" height="200"><button @click="changeType('today',3);isActive = !isActive">today </button></div>
+      <div width="200" height="200"><button @click="changeType('last week',3);isActive = !isActive">last week</button></div>
+      <div width="200" height="200"><button @click="changeType('last month',3);isActive = !isActive">last month</button></div>
+     </div>
+     <div class="sort-by-filter">
+      <h4>sort by</h4>
+      <div width="200" height="200"><button @click="changeType('relevance',2);isActive = !isActive">revelance </button></div>
+      <div width="200" height="200"><button @click="changeType('date',2);isActive = !isActive">update date </button></div>
+      <div width="200" height="200"><button @click="changeType('viewCount',2);isActive = !isActive">view count</button></div>
+      <div width="200" height="200"><button @click="changeType('rating',2);isActive = !isActive">rating</button></div>
+     </div>
+   </div>
+  
+</div>
