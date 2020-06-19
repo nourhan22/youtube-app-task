@@ -1,0 +1,15 @@
+<div>
+    i hate all of you
+    <button @click="getData">get data channel</button> 
+    <div class="channel-banner">
+        <div class="wide-banner"></div>
+        <img class="channel-img" v-if="channelDetails != null"
+            :src="channelDetails.items[0].snippet.thumbnails.high.url" />
+            <p v-if="channelDetails != null">{{channelDetails.items[0].snippet.title}}</p>
+            <p v-if="channelDetails != null">{{channelDetails.items[0].statistics.subscriberCount}} subscribe</p>
+    </div>
+    <div v-if="channelPlayList != null">
+        <VideosListing :item="item" v-for="item in channelPlayList.items"/>
+    </div> 
+
+</div>

@@ -1,0 +1,23 @@
+.channel-banner {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin-bottom: 90px;
+
+    .wide-banner {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(61, 61, 63);
+    }
+
+    .channel-img {
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: 150px;
+        left: 40px;
+        border-radius: 50%;
+    }
+
+}
+

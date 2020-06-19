@@ -23,13 +23,13 @@ export default {
     },
     computed:{
         no:function(){
-            let base_url='https://www.googleapis.com/youtube/v3/channels/';
-            let channelId=this.item.snippet.channelId;
-            console.log("channelId",channelId)
+            // let base_url='https://www.googleapis.com/youtube/v3/channels/';
+            // let channelId=this.item.snippet.channelId;
+            // console.log("channelId",channelId)
              
-               fetch(base_url+'?part=snippet,contentDetails,statistics&id='+channelId+'&key=AIzaSyC8rnG4ewx821LvEAQMQYDPAY7Jl1N8-kw')
-               .then(response => response.json()).then((data) =>{ this.list = data;console.log("data",this.list); this.subscribeNo= this.list.items[0].statistics.subscriberCount; }
-               )
+            //    fetch(base_url+'?part=snippet,contentDetails,statistics&id='+channelId+'&key=AIzaSyCC9GCpSlFnw1jFu8jmiW4KiaZ-828OK_k')
+            //    .then(response => response.json()).then((data) =>{ this.list = data;console.log("data",this.list); this.subscribeNo= this.list.items[0].statistics.subscriberCount; }
+            //    )
                
                console.log("channel",this.subscribeNo);
                return this.subscribeNo

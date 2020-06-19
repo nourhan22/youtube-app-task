@@ -1,6 +1,7 @@
 
 import VideosListing from "../videos-listing/videos-listing.vue";
 import SearchFilter from "../search-filter/search-filter.vue";
+import ChannelDetails from "../channel-details/channel-details.vue";
 let base_url = "https://www.googleapis.com/youtube/v3/search"
 export default {
     data() {
@@ -14,7 +15,8 @@ export default {
     },
     components: {
         VideosListing,
-        SearchFilter
+        SearchFilter,
+        ChannelDetails
     },
     methods: {
         execute: function (value,filterNo) {
@@ -41,7 +43,7 @@ export default {
             // .then(response => response.json())
             // .then((data) => console.log(data))
             // .catch(err => console.log(err))
-            fetch(base_url +'?part=snippet&key=AIzaSyC8rnG4ewx821LvEAQMQYDPAY7Jl1N8-kw&q='+this.searchTxt+'&type='+this.type+'&order='+this.order+'&maxResults=10&')
+            fetch(base_url +'?part=snippet&key=AIzaSyCC9GCpSlFnw1jFu8jmiW4KiaZ-828OK_k&q='+this.searchTxt+'&type='+this.type+'&order='+this.order+'&maxResults=10&')
             .then(response => response.json()).then((data) => { this.list = data ;}
                 )
                 console.log(this.list);

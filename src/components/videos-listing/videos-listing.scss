@@ -23,18 +23,26 @@
     .video-body{
         text-align: left;
         padding:0px 15px;
+        margin-top:10px;
         h4{
             font-size: 16px;
             line-height: 16px;
+            margin: 0px;
            
         }
         h5{
             font-size: 14px;
             line-height: 14px;
+            margin: 15px 0px;
+        }
+        h6{
+            font-size: 12px;
+            line-height: 12px;
+            margin: 15px 0px;
         }
         p{
-            font-size: 12px;
-            line-height: 13px;
+            font-size: 13px;
+            line-height: 16px;
         }
     }
 }
