@@ -20,7 +20,7 @@
         <h5  v-if="item.id.kind == 'youtube#channel' || item.id.kind == 'youtube#video'||item.kind == 'youtube#playlist'"> {{item.snippet.channelTitle}}</h5> 
         <h6  v-if="item.id.kind == 'youtube#channel'">{{no |subscribefilter}} subscibers.</h6> 
         
-        <p>{{item.snippet.description}}</p>
+        <p v-if="relatedVideos != true">{{item.snippet.description}}</p>
         
         <!-- <p>{{item.snippet.publishTime}}</p> -->
     </div>

@@ -3,7 +3,7 @@
 
 
 export default {
-    props:['item'],
+    props:['item','relatedVideos'],
     data() {
         return ({
             // list:this.list 

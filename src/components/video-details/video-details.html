@@ -1,0 +1,33 @@
+<div>
+    geting video data please
+    <button @click="getData">get data channel</button> 
+    <div class="video-details" v-if="videoDetails != null">
+        <iframe class="main-video" :src="'https://www.youtube.com/embed/' + videoDetails.items[0].id"
+        v-if="videoDetails.items[0].kind == 'youtube#video'">
+    </iframe>
+    <div class="video-bar">
+        <div>
+        <h2>{{videoDetails.items[0].snippet.title}}</h2>
+        <span >15,5k watching Now</span>
+    </div>
+        <div class="staticstcs">
+            <span class="icon"> like : </span><span>{{videoDetails.items[0].statistics.likeCount}}</span>
+            <span class="icon"> dislike : </span><span>{{videoDetails.items[0].statistics.dislikeCount}}</span>
+            </div>
+
+    </div>
+    <div class="channel-bar">
+    <img class="channel-img" 
+            :src="channelDetails.items[0].snippet.thumbnails.high.url" />
+            <div class="des">
+               <h3>{{videoDetails.items[0].snippet.channelTitle}}</h3>
+               <h5>published on : {{videoDetails.items[0].snippet.publishedAt}}</h5>
+            </div>
+        
+    </div>
+    </div>
+    <div v-if="relatedVideoList != null">
+        <VideosListing :item="item" :relatedVideos="relatedVideos"v-for="item in relatedVideoList.items"/>
+    </div> 
+
+</div> 
