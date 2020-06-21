@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">MainPage</router-link> |
+      <MainPage/>
+      <!-- <router-link to="/">MainPage</router-link> | -->
     </div>
-    <router-view/>
   </div>
 </template>
 
@@ -29,3 +29,12 @@
   }
 }
 </style>
+<script>
+import MainPage from './components/main-page/main-page.vue'
+export default {
+  components:{
+    MainPage
+  }
+  
+}
+</script>

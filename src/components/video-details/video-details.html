@@ -1,6 +1,10 @@
-<div>
-    geting video data please
+<div class="main-section container-fluid">
+    <div class="container">
+        
+        <div class="row" >
+    <!-- geting video data please
     <button @click="getData">get data channel</button> 
+    {{id}} -->
     <div class="video-details" v-if="videoDetails != null">
         <iframe class="main-video" :src="'https://www.youtube.com/embed/' + videoDetails.items[0].id"
         v-if="videoDetails.items[0].kind == 'youtube#video'">
@@ -16,7 +20,7 @@
             </div>
 
     </div>
-    <div class="channel-bar">
+    <div class="channel-bar" v-if="channelDetails != null">
     <img class="channel-img" 
             :src="channelDetails.items[0].snippet.thumbnails.high.url" />
             <div class="des">
@@ -31,3 +35,5 @@
     </div> 
 
 </div> 
+</div>
+</div>

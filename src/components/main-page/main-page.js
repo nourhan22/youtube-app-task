@@ -11,7 +11,8 @@ export default {
             searchTxt:'',
             type:"video,channel,playlist",
             order:"relevance",
-            uploadDate:"n"
+            uploadDate:"n",
+            q:null
         })
     },
     components: {
@@ -45,7 +46,7 @@ export default {
             // .then(response => response.json())
             // .then((data) => console.log(data))
             // .catch(err => console.log(err))
-            fetch(base_url +'?part=snippet&key=AIzaSyCC9GCpSlFnw1jFu8jmiW4KiaZ-828OK_k&q='+this.searchTxt+'&type='+this.type+'&order='+this.order+'&maxResults=10&')
+            fetch(base_url +'?part=snippet&key=AIzaSyAAsxSi3yD_1-PUKptdm1CAidgNtuMcct4&q='+this.searchTxt+'&type='+this.type+'&order='+this.order+'&maxResults=10&')
             .then(response => response.json()).then((data) => { this.list = data ;}
                 )
                 console.log(this.list);
@@ -57,5 +58,9 @@ export default {
         // listing: function(){
         //     return this.execute();
         // }
+    },
+    mounted: function() {
+        this.q = this.$route.query.q;
+        console.log(this.q);
     }
 }

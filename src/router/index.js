@@ -14,9 +14,10 @@ Vue.use(VueRouter)
   
     },
   {
-    path: '/VideoDetails',
+    path: '/VideoDetails/:id',
     name: 'VideoDetails',
-    component: VideoDetails 
+    component: VideoDetails ,
+    props: true
 
   }
 ]
