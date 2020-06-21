@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <MainPage/>
-      <!-- <router-link to="/">MainPage</router-link> | -->
-    </div>
+   
+      <SearchBar/>
+      <router-link to="/"></router-link>
+      <router-view></router-view>
+      
+   
   </div>
 </template>
 
@@ -30,10 +32,20 @@
 }
 </style>
 <script>
-import MainPage from './components/main-page/main-page.vue'
+import SearchBar from './components/search-bar/search-bar.vue'
+// import MainPage from './components/main-page/main-page.vue'
 export default {
+  data(){
+    return{
+      list:null
+    }
+  },
   components:{
-    MainPage
+   SearchBar,
+  //  MainPage
+  },
+  methods:{
+  
   }
   
 }
