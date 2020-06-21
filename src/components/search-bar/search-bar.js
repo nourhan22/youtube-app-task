@@ -19,17 +19,6 @@ export default {
     },
     methods: {
         execute: function () {
-            this.$root.$on('sendfilter',(value,filterNo)=> {
-                if( filterNo == 1)
-                {
-                    this.type = value;
-                }
-                else if(filterNo == 2)
-                {
-                    this.order=value;
-                }
-            });
-            
             this.uploadDate="last hour"
             // let params = {
             //     part: "snippet",
@@ -57,7 +46,16 @@ export default {
         // }
     },
     mounted: function() {
-        // this.q = this.$route.query.q;
-        // console.log(this.q);
+        this.$root.$on('sendfilter',(value,filterNo)=> {
+            if( filterNo == 1)
+            {
+                this.type = value;
+            }
+            else if(filterNo == 2)
+            {
+                this.order=value;
+            }
+        });
+        this.execute();
     }
 }

@@ -23,12 +23,7 @@ export default {
         }
         
     },
-    computed: {
-        // listing: function(){
-        //     return this.execute();
-        // }
-     },
-    mounted(){
+    computed(){
         this.$root.$on('sibiling',data => {
             console.log(data);
             this.list =data;

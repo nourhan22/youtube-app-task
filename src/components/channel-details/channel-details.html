@@ -3,12 +3,12 @@
         <div class="container">
             
             <div class="row" >
-    geting channel data please
-    <button @click="getData">get data channel</button> 
+    <!-- geting channel data please
+    <button @click="getData">get data channel</button>  -->
     <div class="channel-banner">
         <div class="wide-banner"></div>
         <img class="channel-img" v-if="channelDetails != null"
-            :src="channelDetails.items[0].snippet.thumbnails.high.url" />
+            :src="channelDetails.items[0].snippet.thumbnails.default.url" />
             <p v-if="channelDetails != null">{{channelDetails.items[0].snippet.title}}</p>
             <p v-if="channelDetails != null">{{channelDetails.items[0].statistics.subscriberCount}} subscribe</p>
     </div>

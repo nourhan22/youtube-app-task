@@ -15,11 +15,6 @@ export default {
         
     },
     methods: {
-        // zeft:function(){
-        //     fetch('https://www.googleapis.com/youtube/v3/channels/?part=snippet,contentDetails,statistics&id=UCaJZ13Vz8f5p4cPWLrUCfrg&key=AIzaSyAGz87bI3tgVfoInMb1ijuA2-nQbUo9A7U')
-        //     .then(response => response.json()).then((data) => console.log("chaqnnel data",data)).catch(err => console.log(err))
-        // }
-
     },
     computed:{
         no:function(){
