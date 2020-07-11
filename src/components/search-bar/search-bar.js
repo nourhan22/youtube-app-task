@@ -3,9 +3,11 @@
 // import SearchFilter from "../search-filter/search-filter.vue";
 // import ChannelDetails from "../channel-details/channel-details.vue";
 // import VideoDetails from "../video-details/video-details.vue";
-let base_url = "https://www.googleapis.com/youtube/v3/search"
+import search_api from'~/local-data-testing/search-api.js';
+// import 'D:\Insta\youtube-app\src\local-data-testing\search-api.js'; 
+// let base_url = "https://www.googleapis.com/youtube/v3/search"
 export default {
-    data() {
+    data() { 
         return ({
             list: null,
             searchTxt:'',
@@ -19,23 +21,18 @@ export default {
     },
     methods: {
         execute: function () {
-            this.uploadDate="last hour"
-            // let params = {
-            //     part: "snippet",
-            //     key: "AIzaSyAGz87bI3tgVfoInMb1ijuA2-nQbUo9A7U",
-            //     q: "hello",
-            //     maxResults: 10,
-            //     type: "video"
-
-            // }
+            // //getting from api
+            // this.uploadDate="last hour"
             // fetch(base_url +'?part=snippet&key=AIzaSyAAsxSi3yD_1-PUKptdm1CAidgNtuMcct4&q=hello&type=video&maxResults: 2')
             // .then(response => response.json())
             // .then((data) => console.log(data))
             // .catch(err => console.log(err))
-            fetch(base_url +'?part=snippet&key=AIzaSyCC9GCpSlFnw1jFu8jmiW4KiaZ-828OK_k&q='+this.searchTxt+'&type='+this.type+'&order='+this.order+'&maxResults=10&')
-            .then(response => response.json()).then((data) => { this.list = data ;}
-                )
-                console.log(this.list);
+            // fetch(base_url +'?part=snippet&key=?????????????&q='+this.searchTxt+'&type='+this.type+'&order='+this.order+'&maxResults=100&')
+            // .then(response => response.json()).then((data) => { if(data !=null)this.list = data ;else this.list = search_api;}
+            //     )
+            console.log("local",search_api)
+                this.list = search_api;
+               
                 this.$root.$emit('sibiling',this.list);
                 
         }
